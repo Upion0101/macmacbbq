@@ -1,0 +1,21 @@
+import { Component } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
+
+@Component({
+  selector: 'app-header',
+  standalone: true,
+  imports: [RouterLink, RouterLinkActive],
+  templateUrl: './header.html',
+  styleUrls: ['./header.scss'],
+})
+export class HeaderComponent {
+  mobileOpen = false;
+
+  toggleMenu() {
+    this.mobileOpen = !this.mobileOpen;
+  }
+
+  closeMenu() {
+    this.mobileOpen = false;
+  }
+}

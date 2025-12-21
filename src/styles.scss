@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+@use './styles/theme' as *;
+
+:root { color-scheme: dark; }
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  background: #0b0b0c;
+  color: $white-92;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+
+/* -------------------------------------------------------
+   Light sections: force proper contrast (dark text)
+-------------------------------------------------------- */
+.section.light {
+  background: #f8f8f9;
+  color: #121214;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #0f0f12;
+  }
+
+  p, li, .lead, .subhead, .d {
+    color: #2a2a2e;
+  }
+
+  .text-link,
+  a.text-link {
+    color: #b45309;
+  }
+}
+
+/* Cards inside light sections should not use dark-glass styling */
+.section.light .card {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}

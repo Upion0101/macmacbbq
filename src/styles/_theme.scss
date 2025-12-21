@@ -1,0 +1,100 @@
+/* src/styles/_theme.scss */
+
+/* ---------------- Layout ---------------- */
+$container-max: 1120px;
+$container-pad: 18px;
+
+@mixin container {
+  max-width: $container-max;
+  margin: 0 auto;
+  padding: 0 $container-pad;
+}
+
+/* ---------------- Radii ---------------- */
+$r-12: 12px;
+$r-14: 14px;
+$r-16: 16px;
+$r-18: 18px;
+$r-22: 22px;
+$r-pill: 999px;
+
+/* ---------------- Whites ---------------- */
+$white-95: rgba(255, 255, 255, 0.95);
+$white-92: rgba(255, 255, 255, 0.92);
+$white-88: rgba(255, 255, 255, 0.88);
+$white-82: rgba(255, 255, 255, 0.82);
+$white-78: rgba(255, 255, 255, 0.78);
+$white-72: rgba(255, 255, 255, 0.72);
+$white-60: rgba(255, 255, 255, 0.60);
+$white-55: rgba(255, 255, 255, 0.55);
+
+/* ---------------- Borders ---------------- */
+$border-10: rgba(255, 255, 255, 0.10);
+$border-12: rgba(255, 255, 255, 0.12);
+$border-14: rgba(255, 255, 255, 0.14);
+$border-16: rgba(255, 255, 255, 0.16);
+$border-18: rgba(255, 255, 255, 0.18);
+
+/* Border aliases (prevents undefined-variable errors) */
+$border-w-10: $border-10;
+$border-w-12: $border-12;
+$border-w-14: $border-14;
+$border-w-16: $border-16;
+$border-w-18: $border-18;
+
+/* ---------------- Glass backgrounds ---------------- */
+$bg-glass-06: rgba(255, 255, 255, 0.06);
+$bg-glass-05: rgba(255, 255, 255, 0.05);
+$bg-glass-04: rgba(255, 255, 255, 0.04);
+
+/* ---------------- Blacks ---------------- */
+$black-02: rgba(0, 0, 0, 0.02);
+$black-06: rgba(0, 0, 0, 0.06);
+$black-08: rgba(0, 0, 0, 0.08);
+$black-10: rgba(0, 0, 0, 0.10);
+$black-12: rgba(0, 0, 0, 0.12);
+$black-18: rgba(0, 0, 0, 0.18);
+$black-20: rgba(0, 0, 0, 0.20);
+$black-35: rgba(0, 0, 0, 0.35);
+$black-45: rgba(0, 0, 0, 0.45);
+$black-55: rgba(0, 0, 0, 0.55);
+
+/* ---------------- Brand accents ---------------- */
+$gold-95: rgba(255, 176, 0, 0.95);
+$gold-70: rgba(255, 176, 0, 0.70);
+$gold-60: rgba(255, 176, 0, 0.60);
+$gold-55: rgba(255, 176, 0, 0.55);
+$gold-32: rgba(255, 176, 0, 0.32);
+$gold-28: rgba(255, 176, 0, 0.28);
+$gold-22: rgba(255, 176, 0, 0.22);
+$gold-16: rgba(255, 176, 0, 0.16);
+$gold-10: rgba(255, 176, 0, 0.10);
+
+$orange-18: rgba(255, 77, 46, 0.18);
+$orange-14: rgba(255, 77, 46, 0.14);
+$orange-12: rgba(255, 77, 46, 0.12);
+
+/* ---------------- Shadows ---------------- */
+$shadow-card: 0 18px 50px $black-35;
+$shadow-menu: 0 18px 50px $black-45;
+$shadow-hero: 0 22px 80px $black-55;
+
+/* ---------------- Optional mixins ---------------- */
+@mixin card {
+  border-radius: $r-18;
+  border: 1px solid $border-12;
+  background: $bg-glass-06;
+  box-shadow: $shadow-card;
+}
+
+@mixin pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: $r-pill;
+  border: 1px solid $border-14;
+  background: $black-20;
+  color: $white-78;
+  font-size: 13px;
+}

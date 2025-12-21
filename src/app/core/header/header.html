@@ -1,0 +1,37 @@
+<header class="topbar">
+  <div class="container bar">
+    <a class="brand" routerLink="/" (click)="closeMenu()">
+      <img
+        src="assets/logo.jpg"
+        alt="MakMak BBQ logo"
+        class="logo"
+      />
+
+      <div class="brand-text">
+        <div class="name">MakMak BBQ</div>
+        <div class="tag">Filipino Street Food • Catering • The Streatery</div>
+      </div>
+    </a>
+
+    <nav class="nav" [class.open]="mobileOpen">
+      <a routerLink="/menu" routerLinkActive="active" (click)="closeMenu()">Menu</a>
+      <a routerLink="/catering" routerLinkActive="active" (click)="closeMenu()">Catering</a>
+      <a routerLink="/thestreatery" routerLinkActive="active" (click)="closeMenu()">The Streatery</a>
+      <a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a>
+
+      <a class="cta" routerLink="/catering" (click)="closeMenu()">
+        Request Catering
+      </a>
+    </nav>
+
+    <button
+      class="burger"
+      type="button"
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="mobileOpen"
+      aria-label="Toggle menu"
+    >
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
